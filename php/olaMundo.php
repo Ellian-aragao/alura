@@ -1,24 +1,23 @@
 <?php
-echo "Olá mundo, suave irmão?" . PHP_EOL;
+mensageEndl("Olá mundo.php");
 
 function ifeelse(){
     
     $idade = 15;
-    echo "$idade possui o tipo -> " . gettype($idade) . PHP_EOL;
+    mensageEndl("$idade possui o tipo -> ".gettype($idade));
     
     $idadeLimite = 18;
     if ($idade < $idadeLimite) {
-        echo "menor de \"$idadeLimite\" não pode entrar";
+        mensageEndl("menor de \"$idadeLimite\" não pode entrar");
     } elseif ($idade == $idadeLimite) {
-        echo "deu sorte bora";
+        mensageEndl("deu sorte bora");
     } else {
-        echo "pode entrar";
+        mensageEndl("pode entrar");
     }
-    echo PHP_EOL;
 }
 function arrayDeclaration() {
     $array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11];
-    for ($i = 0; $i < count($array); $i++) {
+    for ($i = 0; $i < count($array); referenciaIncrementa($i)) {
         echo "$array[$i], ";
     }
     echo PHP_EOL;
@@ -40,6 +39,13 @@ function arrayDinamico() {
     ];
     
     foreach ($contasCorrente as $valorConta => $conta) {
-        echo $conta['nome'] . PHP_EOL;
+        ['nome' => $nome, 'conta' => $Nconta] = $conta;
+        mensageEndl("$valorConta -> $nome -> $Nconta");
     }
+}
+function referenciaIncrementa(&$a) {
+    $a++;
+}
+function mensageEndl($mensagem) {
+    echo $mensagem . PHP_EOL;
 }
