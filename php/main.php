@@ -1,9 +1,10 @@
 <?php
-include 'olaMundo.php';
+require 'autoloader.php';
+
 // ifeelse();
 // arrayDeclaration();
 // arrayDinamico();
-splitDoPhp();
+// splitDoPhp();
 
 /* php -S localhost:8080 */
 // echo "<h1>Hello World!</h1>";
