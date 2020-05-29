@@ -67,3 +67,7 @@ function mergeStrings($array)
     $arrayToBiggerString = implode("; ", $array);
     mensageEndl($arrayToBiggerString);
 }
+function removeItemArray($item, &$array) {
+    $position = array_search($item, $array);
+    unset($array[$position]);
+}
