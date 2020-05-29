@@ -52,11 +52,18 @@ function mensageEndl($mensagem)
 {
     echo $mensagem . PHP_EOL;
 }
-
-function splitDoPhp() {
+function splitDoPhp()
+{
     $nomes = "Amanda, Ellian, Roberto, Nicolas";
     $arrayNomes = explode(", ", $nomes);
-    foreach($arrayNomes as $nome) {
+    foreach ($arrayNomes as $nome) {
         mensageEndl("nome: {$nome}");
     }
+    mergeStrings($arrayNomes);
+}
+function mergeStrings($array)
+{
+    mensageEndl("now concat array");
+    $arrayToBiggerString = implode("; ", $array);
+    mensageEndl($arrayToBiggerString);
 }
