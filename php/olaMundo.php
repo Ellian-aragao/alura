@@ -1,11 +1,10 @@
 <?php
-mensageEndl("Olá mundo.php");
+function ifeelse()
+{
 
-function ifeelse(){
-    
     $idade = 15;
-    mensageEndl("$idade possui o tipo -> ".gettype($idade));
-    
+    mensageEndl("$idade possui o tipo -> " . gettype($idade));
+
     $idadeLimite = 18;
     if ($idade < $idadeLimite) {
         mensageEndl("menor de \"$idadeLimite\" não pode entrar");
@@ -15,14 +14,16 @@ function ifeelse(){
         mensageEndl("pode entrar");
     }
 }
-function arrayDeclaration() {
+function arrayDeclaration()
+{
     $array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11];
     for ($i = 0; $i < count($array); referenciaIncrementa($i)) {
         echo "$array[$i], ";
     }
     echo PHP_EOL;
 }
-function arrayDinamico() {
+function arrayDinamico()
+{
     $contasCorrente = [
         101 => [
             'nome' => 'robertinho',
@@ -37,15 +38,25 @@ function arrayDinamico() {
         'nome' => 'maria',
         'conta' => '503298'
     ];
-    
+
     foreach ($contasCorrente as $valorConta => $conta) {
         ['nome' => $nome, 'conta' => $Nconta] = $conta;
         mensageEndl("$valorConta -> $nome -> $Nconta");
     }
 }
-function referenciaIncrementa(&$a) {
+function referenciaIncrementa(&$a)
+{
     $a++;
 }
-function mensageEndl($mensagem) {
+function mensageEndl($mensagem)
+{
     echo $mensagem . PHP_EOL;
+}
+
+function splitDoPhp() {
+    $nomes = "Amanda, Ellian, Roberto, Nicolas";
+    $arrayNomes = explode(", ", $nomes);
+    foreach($arrayNomes as $nome) {
+        mensageEndl("nome: {$nome}");
+    }
 }
