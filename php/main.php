@@ -1,10 +1,12 @@
 <?php
 require 'autoloader.php';
 
+namespace php;
+
 // ifeelse();
 // arrayDeclaration();
 // arrayDinamico();
-// splitDoPhp();
+splitDoPhp();
 
 /* php -S localhost:8080 */
 // echo "<h1>Hello World!</h1>";

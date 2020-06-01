@@ -1,5 +1,4 @@
 <?php
-
 spl_autoload_register(
     function(string $namespaceClass): void {
         $way = "/php";
