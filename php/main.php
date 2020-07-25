@@ -1,7 +1,7 @@
 <?php
+namespace php;
 require 'autoloader.php';
 
-namespace php;
 
 // ifeelse();
 // arrayDeclaration();
