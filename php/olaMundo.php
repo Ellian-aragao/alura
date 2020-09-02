@@ -52,6 +52,7 @@ function mensageEndl($mensagem)
 {
     echo $mensagem . PHP_EOL;
 }
+
 function splitDoPhp()
 {
     $nomes = "Amanda, Ellian, Roberto, Nicolas";
@@ -61,6 +62,7 @@ function splitDoPhp()
     }
     mergeStrings($arrayNomes);
 }
+
 function mergeStrings($array)
 {
     mensageEndl("now concat array");
